@@ -45,6 +45,6 @@ criarRota('mentions-overview', 'mentions_overview');
 criarRota('mentions-hourly', 'mentions_hourly ORDER BY timestamp_hour ASC');
 criarRota('real-time-topics', 'real_time_topics ORDER BY size_score DESC');
 
-app.listen(porta, 'localhost', () => {
-  console.log(`Servidor backend rodando em http://localhost:${porta}`);
+app.listen(porta, '0.0.0.0', () => {
+  console.log(`Servidor backend rodando na porta ${porta}`);
 });
